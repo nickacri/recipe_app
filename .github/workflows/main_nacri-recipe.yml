@@ -59,4 +59,4 @@ jobs:
         with:
           app-name: 'nacri-recipe'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_6e98d786ef4f4324a0b6a83cab5bc671 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_91d8f268a4804221aa2be50517f6b8fb }}
