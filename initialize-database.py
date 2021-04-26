@@ -73,13 +73,13 @@ def initial_database():
 
     # add categories
     main = add_category('Main dishes')
-    drink = add_category('Drinks')
+    drink = add_category('Appetizer')
     desserts = add_category('Desserts')
 
    
     # add recipe
-    chicken_parmesean = add_recipe('Chicken Parmesean', 'Main dishes',
-                                   'chicken', 'cook it good', 'cook it real good', 'Mike', 'Colbert')
+    chicken_parmesean = add_recipe('Ravioli', 'Appetizer',
+                                   'Pasta', 'at 400', 'cook it real good', 'Nick', 'Acri')
 
 
 def main():

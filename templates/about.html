@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} about {% endblock %}
+
+{% block body %}
+
+<form id="about" method="POST" action="{{ url_for('about') }}"></form>
+
+<h3>{{ about['about'] }}</h3>
+    <p>After purchasing an air fryer in 2020, I didn't know any recipes. So I did what everone would do, go to the internet and search for recipes. 
+        I am a below average cook so I like to look for easy to make meals. As I was searching the web, I noticed that their wern't any quality
+        easy to make meals without frozen foods. So I experimented with different recipes and have gotten some very good, easy things to make.
+        I am still working on creating more and will add them to this web application as I create them. I made this website available the public
+        and the public to be able to create recipes. I did this so anybody can give me a easy to make air fryer recipe!
+    </p>
+
+{% endblock %}
