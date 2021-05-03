@@ -5,7 +5,7 @@
 {% block pageDescription %} <meta
 name="description" 
 content="Login to view Nick's recipes">
-/>
+
 {% endblock %}
 
 {% block body %} 
@@ -20,9 +20,9 @@ content="Login to view Nick's recipes">
 <label for="password">Password</label>
 <input type="password" name="password" id="password" placeholder="Password">
 </p>
-<p><button type="submit" class="btn btn-primary btn-block">Log In</button></p>
+<p><button type="submit" class="btn btn-dark btn-block">Log In</button></p>
 
 </form>
-<p>Don't have an account? <a href="{{ url_for('register') }}">Sign up here</a>.</p>
+<p style="color: black;"> Don't have an account? <a style="color:gray;" href="{{ url_for('register') }}"> Sign up here</a>.</p>
 
 {% endblock %}
