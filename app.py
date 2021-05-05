@@ -325,8 +325,6 @@ def delete_category(category_id):
 
 # authenticated users can view al the recipes
 @app.route('/recipes', methods=['GET', 'POST'])
-@login_required
-@roles_required('admin', 'contributor', 'user')
 def view_recipes():
     return render_template('recipes.html', all_recipes=recipes.find())
 
