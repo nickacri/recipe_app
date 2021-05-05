@@ -129,6 +129,8 @@ def search():
 
 # unauthenticated users can view the about page
 @app.route('/about')
+@login_required
+@roles_required('user', 'contributor', 'admin')
 def about():
     return 'about page'
 
