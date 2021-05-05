@@ -330,8 +330,6 @@ def view_recipes():
 
 # authenticated users can print a recipe
 @app.route('/recipes/print-recipe/<recipe_id>', methods=['GET', 'POST'])
-@login_required
-@roles_required('admin', 'contributor', 'user')
 def print_recipe(recipe_id):
     print_recipe = recipes.find_one({'_id': ObjectId(recipe_id)})
     if print_recipe:
@@ -341,15 +339,11 @@ def print_recipe(recipe_id):
 
 # administrators users can manage all recipes
 @app.route('/recipes/admin', methods=['GET', 'POST'])
-@login_required
-@roles_required('admin')
 def admin_recipes():
     return render_template('recipe-admin.html', all_categories=categories.find(), all_recipes=recipes.find())
 
 # administrators and contributors can add new recipes
 @app.route('/recipes/add-recipe', methods=['GET', 'POST'])
-@login_required
-@roles_required('admin', 'contributor')
 def add_recipe():
     if request.method == 'POST':
         form = request.form
